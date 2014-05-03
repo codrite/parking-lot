@@ -8,6 +8,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 
+/*
+ Get a parking slip printed on entering the parking lot
+ */
 @RestController
 public class EnterIntoParkingLot {
 

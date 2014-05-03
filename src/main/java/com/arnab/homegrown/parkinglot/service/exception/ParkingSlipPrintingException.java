@@ -1,4 +1,4 @@
-package com.arnab.projects.parkinglot.service.exception;
+package com.arnab.homegrown.parkinglot.service.exception;
 
 
 public class ParkingSlipPrintingException extends RuntimeException {

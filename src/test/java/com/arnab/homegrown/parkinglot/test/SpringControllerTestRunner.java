@@ -1,4 +1,4 @@
-package com.arnab.projects.parkinglot.test;
+package com.arnab.homegrown.parkinglot.test;
 
 import org.junit.runner.RunWith;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;

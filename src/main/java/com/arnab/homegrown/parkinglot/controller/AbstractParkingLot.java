@@ -1,7 +1,7 @@
-package com.arnab.projects.parkinglot.controller;
+package com.arnab.homegrown.parkinglot.controller;
 
 
-import com.arnab.projects.parkinglot.service.ParkingKiosk;
+import com.arnab.homegrown.parkinglot.service.ParkingKiosk;
 
 import javax.annotation.Resource;
 

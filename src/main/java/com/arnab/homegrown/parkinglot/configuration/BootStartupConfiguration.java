@@ -1,4 +1,4 @@
-package com.arnab.projects.parkinglot.configuration;
+package com.arnab.homegrown.parkinglot.configuration;
 
 import org.springframework.context.annotation.Configuration;
 

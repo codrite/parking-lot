@@ -1,6 +1,6 @@
-package com.arnab.projects.parkinglot.controller;
+package com.arnab.homegrown.parkinglot.controller;
 
-import com.arnab.projects.parkinglot.domain.ParkingSlip;
+import com.arnab.homegrown.parkinglot.domain.EntryParkingSlip;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,9 +13,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class EnterParkingLotController extends AbstractParkingLot {
 
     @RequestMapping(value = "/requestParkingSlip", method = RequestMethod.GET)
-    public ParkingSlip issueAParkingSlip() {
-        ParkingSlip parkingSlip = parkingKiosk.printNewParkingSlip();
-        return parkingSlip;
+    public EntryParkingSlip issueAParkingSlip() {
+        EntryParkingSlip entryParkingSlip = parkingKiosk.printNewParkingSlip();
+        return entryParkingSlip;
     }
 
 }

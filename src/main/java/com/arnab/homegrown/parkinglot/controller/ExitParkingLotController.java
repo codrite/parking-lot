@@ -1,7 +1,7 @@
 package com.arnab.homegrown.parkinglot.controller;
 
-import com.arnab.homegrown.parkinglot.domain.ExitParkingSlip;
-import com.arnab.homegrown.parkinglot.service.ParkingKiosk;
+import com.arnab.homegrown.parkinglot.domain.vo.ExitParkingSlip;
+import com.arnab.homegrown.parkinglot.domain.ParkingKiosk;
 import org.springframework.stereotype.Controller;
 
 import javax.annotation.Resource;

@@ -3,10 +3,10 @@ package com.arnab.homegrown.parkinglot.test;
 
 import com.arnab.homegrown.parkinglot.controller.EnterParkingLotController;
 import com.arnab.homegrown.parkinglot.controller.ExitParkingLotController;
-import com.arnab.homegrown.parkinglot.domain.EntryParkingSlip;
-import com.arnab.homegrown.parkinglot.domain.EntryParkingSlipVO;
-import com.arnab.homegrown.parkinglot.domain.ExitParkingSlip;
-import com.arnab.homegrown.parkinglot.domain.ExitParkingSlipVO;
+import com.arnab.homegrown.parkinglot.domain.vo.EntryParkingSlip;
+import com.arnab.homegrown.parkinglot.domain.vo.EntryParkingSlipVO;
+import com.arnab.homegrown.parkinglot.domain.vo.ExitParkingSlip;
+import com.arnab.homegrown.parkinglot.domain.vo.ExitParkingSlipVO;
 
 import java.sql.Timestamp;
 
@@ -41,7 +41,6 @@ public class MockControllers {
 
     private static ExitParkingSlip createReceiptSlip() {
         EntryParkingSlip entryParkingSlip = EntryParkingSlipVO.print("DL-3C AL 6224");
-        ExitParkingSlip exitParkingSlip = new ExitParkingSlipVO(entryParkingSlip);
-        return exitParkingSlip;
+        return new ExitParkingSlipVO(entryParkingSlip);
     }
 }

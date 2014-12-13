@@ -1,6 +1,6 @@
 package com.arnab.homegrown.parkinglot.controller;
 
-import com.arnab.homegrown.parkinglot.domain.vo.EntryParkingSlip;
+import com.arnab.homegrown.parkinglot.domain.parking.vo.EntryParkingSlip;
 import com.arnab.homegrown.parkinglot.test.MockControllers;
 import org.junit.Assert;
 import org.junit.Test;
@@ -12,7 +12,7 @@ public class EnterParkingLotTest {
     @Test
     public void printAMockParkingSlip() {
         EnterParkingLotController enterParkingLotController = MockControllers.createEnterParkingLotController();
-        EntryParkingSlip entryParkingSlip = enterParkingLotController.issueAParkingSlip();
+        EntryParkingSlip entryParkingSlip = enterParkingLotController.requestEntry();
 
         Assert.assertNotNull(entryParkingSlip);
         Assert.assertTrue("Parking Time Stamp is valid", entryParkingSlip.getEntryTimeStamp().before(getCurrentTimeStamp()));

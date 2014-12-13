@@ -1,4 +1,4 @@
-package com.arnab.homegrown.parkinglot.domain.vo;
+package com.arnab.homegrown.parkinglot.domain.parking.vo;
 
 import java.sql.Timestamp;
 

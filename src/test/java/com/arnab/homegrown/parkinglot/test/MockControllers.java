@@ -3,10 +3,10 @@ package com.arnab.homegrown.parkinglot.test;
 
 import com.arnab.homegrown.parkinglot.controller.EnterParkingLotController;
 import com.arnab.homegrown.parkinglot.controller.ExitParkingLotController;
-import com.arnab.homegrown.parkinglot.domain.vo.EntryParkingSlip;
-import com.arnab.homegrown.parkinglot.domain.vo.EntryParkingSlipVO;
-import com.arnab.homegrown.parkinglot.domain.vo.ExitParkingSlip;
-import com.arnab.homegrown.parkinglot.domain.vo.ExitParkingSlipVO;
+import com.arnab.homegrown.parkinglot.domain.parking.vo.EntryParkingSlip;
+import com.arnab.homegrown.parkinglot.domain.parking.vo.EntryParkingSlipVO;
+import com.arnab.homegrown.parkinglot.domain.parking.vo.ExitParkingSlip;
+import com.arnab.homegrown.parkinglot.domain.parking.vo.ExitParkingSlipVO;
 
 import java.sql.Timestamp;
 
@@ -24,7 +24,7 @@ public class MockControllers {
         // Parking lot mock controller
         EnterParkingLotController enterParkingLotController = mock(EnterParkingLotController.class);
 
-        when(enterParkingLotController.issueAParkingSlip()).thenReturn(entryParkingSlip);
+        when(enterParkingLotController.requestEntry()).thenReturn(entryParkingSlip);
 
         return enterParkingLotController;
     }
@@ -34,7 +34,8 @@ public class MockControllers {
         ExitParkingLotController exitParkingLotController = mock(ExitParkingLotController.class);
 
         // create receipt on exiting parking lot
-        when(exitParkingLotController.issueAReceipt()).thenReturn(createReceiptSlip());
+        EntryParkingSlip entryParkingSlip = mock(EntryParkingSlip.class);
+        when(exitParkingLotController.requestExit(entryParkingSlip)).thenReturn(createReceiptSlip());
 
         return exitParkingLotController;
     }

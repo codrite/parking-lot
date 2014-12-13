@@ -19,6 +19,7 @@ public class ExitParkingLotTest {
         when(exitParkingLotController.requestExit(entryParkingSlip)).thenReturn(new ExitParkingSlipVO(entryParkingSlip));
         ExitParkingSlip exitReceipt = exitParkingLotController.requestExit(entryParkingSlip);
         Assert.assertNotNull(exitReceipt);
+
     }
 
 
